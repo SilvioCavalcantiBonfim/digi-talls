@@ -1,9 +1,0 @@
-<h1 class="w-full">FAQs</h1>
-
-<section class="flex w-full">
-  <% if @faqs.any? %>
-      <%= render partial: 'faq', collection: @faqs %>
-  <% else %>
-    <p>No active FAQs found.</p>
-  <% end %>
-</section>

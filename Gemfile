@@ -77,3 +77,5 @@ gem 'tailwindcss-rails', '~> 2.7'
 gem 'devise', '~> 4.9'
 
 gem 'overcommit', '~> 0.64.0'
+
+gem "hotwire-rails", "~> 0.1.3"

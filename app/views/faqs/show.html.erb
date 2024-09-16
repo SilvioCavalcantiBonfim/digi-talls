@@ -1,0 +1,11 @@
+<h1 class="w-full">FAQs</h1>
+
+<section class="flex flex-col gap-5 w-full">
+  <% if @faqs.any? %>
+    <%@faqs.each do |faq|%>
+      <%= render partial: 'editor', locals: { faq: faq } %>
+    <%end%>
+  <% else %>
+    <p>No active FAQs found.</p>
+  <% end %>
+</section>
