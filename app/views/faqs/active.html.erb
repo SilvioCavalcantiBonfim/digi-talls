@@ -1,14 +1,9 @@
-<h1>FAQs</h1>
+<h1 class="w-full">FAQs</h1>
 
-<% if @faqs.any? %>
-  <ul>
-    <% @faqs.each do |faq| %>
-      <li>
-        <strong><%= faq.question %></strong>
-        <p><%= faq.answer %></p>
-      </li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>No active FAQs found.</p>
-<% end %>
+<section class="flex w-full">
+  <% if @faqs.any? %>
+      <%= render partial: 'faq', collection: @faqs %>
+  <% else %>
+    <p>No active FAQs found.</p>
+  <% end %>
+</section>
