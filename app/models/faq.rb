@@ -1,5 +1,8 @@
 class Faq < ApplicationRecord
-  validate :question, presence: true, length: { minimum: 3 }
-  validate :answer, presence: true, length: { minimum: 3 }
-  validate :is_active, presence: true
+  validates :question, presence: true, length: { minimum: 3 }
+  validates :answer, presence: true, length: { minimum: 3 }
+
+  validates :is_active, inclusion: { in: [true, false] }
+
+  include Activable
 end
