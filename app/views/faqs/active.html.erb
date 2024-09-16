@@ -1,0 +1,14 @@
+<h1>FAQs</h1>
+
+<% if @faqs.any? %>
+  <ul>
+    <% @faqs.each do |faq| %>
+      <li>
+        <strong><%= faq.question %></strong>
+        <p><%= faq.answer %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No active FAQs found.</p>
+<% end %>
