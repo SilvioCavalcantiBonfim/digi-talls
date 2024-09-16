@@ -1,10 +1,13 @@
 <div class="py-4">
-        <div data-controller="faq">
-          <button data-action="click->faq#toggle" class="w-full text-left flex justify-between items-center">
+        <div class="flex flex-col" data-controller="faq">
+          <button 
+            data-action="click->faq#toggle" 
+            data-faq-target="button"
+            class="faq-title">
             <span class="font-semibold"><%= faq.question %></span>
             <span
               data-faq-target="icon"
-              class="material-symbols-outlined"
+              class="material-symbols-outlined transition-all"
             >
               expand_more
             </span>
@@ -13,7 +16,7 @@
             data-faq-target="content"
             class="hidden mt-2"
           >
-            <p class="text-gray-600">
+            <p class="text-gray-600 font-normal text-base flex items-center">
               <%= faq.answer %>
             </p>
           </div>

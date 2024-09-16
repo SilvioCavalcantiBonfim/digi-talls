@@ -2,8 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './animation.tailwind.css';
+
 @layer components {
   .btn-cicle {
     @apply flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-300;
+  }
+  .faq-title{
+    @apply box-border flex w-full justify-between items-center py-2.5 px-8 gap-10 border border-[#904A44] rounded-md transition-colors text-gray-600;
+  }
+  .faq-color{
+    @apply text-[#904A44];
+  }
+
+  .scale-in-ver-top {
+            animation: scale-in-ver-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  .scale-out-ver-top {
+            animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
 }
