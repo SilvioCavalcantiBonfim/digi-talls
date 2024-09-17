@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :faqs, only: [:index]
-  get '_faqs', to: 'faqs#show'
+
+  namespace :admin do
+    resources :faqs
+  end
 end
