@@ -1,4 +1,5 @@
-<section class="flex w-full items-center my-8">
+<main class="m-auto container">
+  <section class="flex w-full items-center my-8">
   <h1 class="flex-1">FAQs</h1>
   <%= link_to new_admin_faq_path do%>
   <%=t('faq.new')%>
@@ -21,7 +22,7 @@
 
 </section>
 
-<section class="flex flex-col gap-5 w-full">
+<section class="flex flex-col gap-5 w-full mb-5">
   <% if @faqs.any? %>
     <%@faqs.each do |faq|%>
       <%= render partial: 'faq', locals: { faq: faq } %>
@@ -30,3 +31,4 @@
     <p><%= t('faq.not_found')%></p>
   <% end %>
 </section>
+</main>
