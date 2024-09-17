@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  back_to_all_faqs: "Back to all FAQs"
+  new_faq: "Create New FAQ"

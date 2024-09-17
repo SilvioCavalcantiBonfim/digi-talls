@@ -1,5 +1,12 @@
-<h1 class="w-full">FAQs</h1>
-
+<div class="flex w-full items-center my-8">
+  <h1 class="flex-1">FAQs</h1>
+  <%= link_to new_admin_faq_path do%>
+  <%=t(:new_faq)%>
+    <span class="material-symbols-outlined">
+      add
+    </span>
+  <%end%>
+</div>
 <section class="flex flex-col gap-5 w-full">
   <% if @faqs.any? %>
     <%@faqs.each do |faq|%>

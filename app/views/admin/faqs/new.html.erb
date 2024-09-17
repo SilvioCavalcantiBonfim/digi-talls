@@ -1,0 +1,10 @@
+  <h1>New FAQ</h1>
+
+  <%= render "form", faq: @faq do%>
+    <%= link_to admin_faqs_path do%>
+    <span class="material-symbols-outlined">
+    arrow_back
+    </span>
+    <%= t(:back_to_all_faqs)%>
+    <%end%>
+  <%end%>
