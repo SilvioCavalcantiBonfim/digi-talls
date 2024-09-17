@@ -1,7 +1,5 @@
-<div class="w-full max-w-lg mx-auto">
-  <div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
     <%@faqs.each do |faq|%>
       <%= render partial: 'faq', locals: { faq: faq } %>
     <%end%>
-  </div>
 </div>
