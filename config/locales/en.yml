@@ -30,6 +30,15 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-  back_to_all_faqs: "Back to all FAQs"
-  new_faq: "Create New FAQ"
+  faq:
+    back_to_all: "Back to all FAQs"
+    new: "Create FAQ"
+    editing: "Editing FAQ" 
+    question: "Question"
+    answer: "Answer"
+    is_active: "Visible"
+    not_found: "No FAQs found."
+    caption:
+      visible: "Visible FAQs"
+      hidden: "Hidden FAQs"
+

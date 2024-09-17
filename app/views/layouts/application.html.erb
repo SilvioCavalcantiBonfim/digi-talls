@@ -13,9 +13,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-8 py-5 bg-white shadow">
+  <body class="flex flex-col">
+    <main class="container mx-auto px-8 py-5 bg-white shadow max-h-[100vh] overflow-auto flex-1">
       <%= yield %>
-      </main>
+    </main>
   </body>
 </html>

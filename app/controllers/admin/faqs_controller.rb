@@ -1,5 +1,5 @@
 class Admin::FaqsController < ApplicationController
-  before_action :set_faq, only: %i[destroy]
+  before_action :set_faq, only: %i[destroy edit update]
   def index
     @faqs = Faq.all
   end
@@ -19,6 +19,22 @@ class Admin::FaqsController < ApplicationController
         format.json { render :show, status: :created, location: @faq }
       else
         format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @faq.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # GET /admin/faq/1/edit
+  def edit; end
+
+  # PATCH/PUT /admin/faq/1 or /admin/faq/1.json
+  def update
+    respond_to do |format|
+      if @faq.update(faq_params)
+        format.html { redirect_to admin_faqs_path, status: :see_other, notice: 'Faq was successfully destroyed.' }
+        format.json { head :no_content }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @faq.errors, status: :unprocessable_entity }
       end
     end

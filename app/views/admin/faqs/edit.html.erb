@@ -1,10 +1,10 @@
-  <h1><%= t('faq.new')%></h1>
+<h1><%= t('faq.editing') %></h1>
 
   <%= render "form", faq: @faq do%>
     <%= link_to admin_faqs_path do%>
     <span class="material-symbols-outlined">
     arrow_back
     </span>
-    <%= t(:back_to_all_faqs)%>
+    <%= t('faq.back_to_all') %>
     <%end%>
   <%end%>

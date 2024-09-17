@@ -1,14 +1,18 @@
-  <div class="flex border rounded py-5 items-center pl-5">
-    <strong class="flex-1">
+<div class="flex border rounded py-5 items-center pl-5 border-l-8 border-<%= faq.is_active ? 'green' : 'red' %>-800 ">
+  <div class="flex-1 min-w-0"> 
+    <strong>
       <%= faq.question %>
-      </strong>
-    <div class="flex gap-5 px-5">
-    <button class="btn-cicle">
-      <span class="material-symbols-outlined opacity-50">edit</span>
-    </button>
-    
-    <%= button_to admin_faq_path(faq), method: :delete, class: "btn-cicle bg-transparent hover:bg-red-800 hover:text-white text-gray-500 p-2 transition-all" do%>
-      <i class="material-symbols-outlined">delete</i>
-    <%end%>
-    </div>
+    </strong>
+    <p class="truncate">
+      <%= faq.answer %>
+    </p>
   </div>
+  <div class="flex gap-5 px-5">
+    <%= link_to edit_admin_faq_path(faq), class: "btn-cicle bg-transparent hover:bg-blue-800 hover:text-white text-gray-500 transition-all" do %>
+      <i class="material-symbols-outlined">edit</i>
+    <% end %> 
+    <%= button_to admin_faq_path(faq), method: :delete, class: "btn-cicle bg-transparent hover:bg-red-800 hover:text-white text-gray-500 transition-all" do %>
+      <i class="material-symbols-outlined">delete</i>
+    <% end %>
+  </div>
+</div>
