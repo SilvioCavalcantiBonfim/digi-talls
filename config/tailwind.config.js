@@ -4,7 +4,7 @@ module.exports = {
   content: [
     './public/*.html',
     './app/helpers/**/*.rb',
-    './a p/javascript/**/*.js',
+    './app/javascript/**/*.js',
     './app/views/**/*.{erb,haml,html,slim}'
   ],
   safelist: [
