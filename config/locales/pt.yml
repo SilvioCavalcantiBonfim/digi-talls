@@ -1,0 +1,13 @@
+pt:
+  email: "E-mail"
+  faq:
+    back_to_all: "Voltar para todas as FAQs"
+    new: "Criar FAQ"
+    editing: "Editando FAQ" 
+    question: "Pergunta"
+    answer: "Resposta"
+    is_active: "Visível"
+    not_found: "Nenhuma FAQ encontrada."
+    caption:
+      visible: "FAQs Visíveis"
+      hidden: "FAQs Ocultas"

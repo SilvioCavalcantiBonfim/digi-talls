@@ -30,6 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  email: "E-mail"
   faq:
     back_to_all: "Back to all FAQs"
     new: "Create FAQ"

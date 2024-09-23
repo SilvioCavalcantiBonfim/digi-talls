@@ -54,4 +54,10 @@
   h1{
     @apply text-[#b22222] text-4xl font-normal font-['Roboto'];
   }
+  main{
+    @apply container m-auto;
+  }
+  .form-sgin{
+    @apply bg-white w-full;
+  }
 }
