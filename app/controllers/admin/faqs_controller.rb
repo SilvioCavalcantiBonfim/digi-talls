@@ -1,5 +1,7 @@
 class Admin::FaqsController < ApplicationController
   before_action :set_faq, only: %i[destroy edit update]
+  before_action :authenticate_user!
+
   def index
     @faqs = Faq.all
   end

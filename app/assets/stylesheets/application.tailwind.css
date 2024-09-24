@@ -58,6 +58,9 @@
     @apply container m-auto;
   }
   .form-sgin{
-    @apply bg-white w-full;
+	  @apply bg-white shadow w-auto p-5;
+  }
+  .field{
+	@apply w-full;
   }
 }
