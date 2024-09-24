@@ -1,5 +1,7 @@
 pt:
   email: "E-mail"
+  password: "Password"
+  login: "Log In"
   faq:
     back_to_all: "Voltar para todas as FAQs"
     new: "Criar FAQ"

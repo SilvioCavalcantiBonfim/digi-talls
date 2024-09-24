@@ -31,6 +31,8 @@
 
 en:
   email: "E-mail"
+  password: "Senha"
+  login: "Entrar"
   faq:
     back_to_all: "Back to all FAQs"
     new: "Create FAQ"

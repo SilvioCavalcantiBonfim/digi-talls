@@ -1,7 +1,10 @@
-<main class="flex flex-col justify-center items-center min-h-screen">
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-sgin w-1/2' }) do |f| %>
-    
-    <h1 class="mb-4 text-2xl">Log in</h1>
+<section class="w-full h-full flex items-center justify-center">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-sgin' }) do |f| %>
+  <section class="flex items-center justify-center flex-col w-full p-10 md:min-w-[330px] md:max-w-[450px] md:max-h-[480px]">
+    <h1 class="mb-4 flex items-center gap-2">
+      <span class="material-symbols-outlined">admin_panel_settings</span>
+      <span><%=t('login')%></span>
+    </h1>
 
     <div class="field mb-4">
       <%= f.label :email do %>
@@ -20,7 +23,13 @@
     </div>
 
     <div class="actions w-full">
-      <%= f.submit "Log in", class: 'w-full' %>
+      <button type="submit" class="w-full flex justify-center items-center gap-2">
+        <span class="material-symbols-outlined">login</span>
+        <%=t('login')%>
+      </button>
     </div>
+  </section>
+  <%= image_tag 'adm.webp', alt: 'banner-admin', class: 'hidden lg:block overflow-hidden' %>
+
   <% end %>
-</main>
+</section>

@@ -25,12 +25,30 @@
     animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
 
-  body{
-    @apply bg-[#fff8f7];
+  .form-sgin{
+	  @apply bg-white w-full h-full flex items-center justify-center;
+
+    @apply lg:w-max lg:h-max lg:shadow;
   }
 
-  form{
-    @apply w-full flex flex-col gap-5;
+  .field{
+	@apply w-full;
+  }
+
+  html {
+    @apply min-h-screen h-full w-screen;
+  }
+
+  body {
+    @apply bg-[#fff8f7] h-full w-full flex flex-col;
+  }
+
+  main{
+    @apply w-full flex-1;
+  }
+
+  form {
+    @apply w-full flex my-auto;
   }
 
   label {
@@ -41,26 +59,23 @@
     @apply bg-white border-[0.5px] border-[#D1D5DB] box-border w-full py-2.5 px-3.5;
     @apply focus:outline-none focus:ring-1 focus:ring-[#b22222] focus:border-[#b22222] transition-colors duration-300;
   }
-  
-  textarea{
+
+  textarea {
     @apply focus:outline-none focus:ring-1 focus:ring-[#b22222] focus:border-[#b22222] transition-colors duration-300;
     @apply bg-white border-[0.5px] border-[#D1D5DB] box-border w-full py-2.5 px-3.5;
   }
 
-  button, input[type=submit], a{
+  button,
+  input[type=submit],
+  a {
     @apply px-4 py-3 bg-[#b22222] justify-between items-center inline-flex text-center text-white text-base font-medium cursor-pointer hover:bg-red-800 transition-all;
   }
 
-  h1{
-    @apply text-[#b22222] text-4xl font-normal font-['Roboto'];
+  h1 {
+    @apply text-[#b22222] text-2xl font-normal font-['Roboto'];
   }
-  main{
-    @apply container m-auto;
-  }
-  .form-sgin{
-	  @apply bg-white shadow w-auto p-5;
-  }
-  .field{
-	@apply w-full;
+
+  footer{
+    @apply w-full bg-white justify-start items-center gap-5 flex flex-col py-5 md:flex-row-reverse md:px-10;
   }
 }

@@ -14,8 +14,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="flex flex-col">
+  <body>
+    <main>
       <%= yield %>
+    </main>
     <%= render 'shared/footer'%>
   </body>
 </html>
