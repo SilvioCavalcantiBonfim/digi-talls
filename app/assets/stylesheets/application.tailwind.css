@@ -38,7 +38,7 @@
   }
 
   header{
-    @apply w-full bg-[#b22222] bg-opacity-10 mb-5 shadow;
+    @apply w-full bg-[#b22222] bg-opacity-10 shadow;
   }
 
   main{
