@@ -1,9 +1,8 @@
-<section class="w-full h-full flex items-center justify-center bg-white lg:shadow lg:max-w-[1024px] lg:max-h-[460px]">
+<section class="w-full h-full flex items-center justify-center bg-white lg:shadow-xl lg:max-w-[1024px] lg:max-h-[460px] lg:rounded-l">
   <section class="flex items-center justify-center flex-col w-full lg:w-1/3">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-sgin' }) do |f| %>
-      <h1 class="mb-4 flex items-center gap-2">
-        <span class="material-symbols-outlined">admin_panel_settings</span>
-        <span><%=t('title')%></span>
+      <h1 class="mb-4 gap-2">
+        <%=t('login_to_you_account')%>
       </h1>
 
       <div class="field mb-4">
@@ -29,7 +28,8 @@
         </button>
       </div>
   </section>
-  <div class="hidden lg:block lg:h-full lg:flex-1 bg-red-500"/>
-    <%#= image_tag 'adm.webp', alt: 'banner-admin', class: 'hidden lg:block lg:h-full lg:w-auto overflow-hidden' %>
+  <div class="hidden lg:block lg:h-full lg:flex-1 bg-red-500 rounded-r">
+    <%= image_tag 'adm.webp', alt: 'banner-admin', class: 'object-cover h-full w-full rounded-r' %>
+  </div>
   <% end %>
 </section>
