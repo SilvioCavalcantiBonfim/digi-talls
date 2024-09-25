@@ -1,7 +1,6 @@
 <% if user_signed_in? %>
 <header>
-  <section class="container mx-auto flex items-center gap-10">
-    <%= render 'shared/logo', width: 50, height: 50 %>
+  <section class="container h-full py-4 mx-auto flex items-center gap-10">
     <nav class="flex-1 flex items-center gap-5">
       <%= link_to admin_faqs_path, class: 'btn-outline' do %>
         <%= t('faq.admin.manager')%>
