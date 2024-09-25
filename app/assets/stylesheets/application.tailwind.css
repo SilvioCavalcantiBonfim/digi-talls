@@ -25,18 +25,12 @@
     animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
 
-  .form-sgin{
-	  @apply bg-white w-full h-full flex items-center justify-center;
-
-    @apply lg:w-max lg:h-max lg:shadow;
-  }
-
   .field{
-	@apply w-full;
+    @apply w-full;
   }
 
   html {
-    @apply min-h-screen h-full w-screen;
+    @apply min-h-screen h-full w-screen font-['Roboto'];
   }
 
   body {
@@ -44,11 +38,7 @@
   }
 
   main{
-    @apply w-full flex-1;
-  }
-
-  form {
-    @apply w-full flex my-auto;
+    @apply w-full flex-1 container mx-auto flex items-center justify-center;
   }
 
   label {
@@ -72,10 +62,14 @@
   }
 
   h1 {
-    @apply text-[#b22222] text-2xl font-normal font-['Roboto'];
+    @apply text-[#b22222] flex justify-center items-center text-2xl font-normal font-['Roboto'];
   }
 
   footer{
-    @apply w-full bg-white justify-start items-center gap-5 flex flex-col py-5 md:flex-row-reverse md:px-10;
+    @apply w-full bg-white justify-start items-center gap-5 flex flex-col py-5 sm:flex-row-reverse sm:px-10;
+  }
+
+  .form-sgin{
+    @apply w-full px-10 md:px-20 lg:px-10;
   }
 }

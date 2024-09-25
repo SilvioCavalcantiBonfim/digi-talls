@@ -2,6 +2,7 @@ pt:
   email: "E-mail"
   password: "Password"
   login: "Log In"
+  title: "Digi Talls"
   faq:
     back_to_all: "Voltar para todas as FAQs"
     new: "Criar FAQ"

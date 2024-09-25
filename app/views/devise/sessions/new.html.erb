@@ -1,35 +1,35 @@
-<section class="w-full h-full flex items-center justify-center">
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-sgin' }) do |f| %>
-  <section class="flex items-center justify-center flex-col w-full p-10 md:min-w-[330px] md:max-w-[450px] md:max-h-[480px]">
-    <h1 class="mb-4 flex items-center gap-2">
-      <span class="material-symbols-outlined">admin_panel_settings</span>
-      <span><%=t('login')%></span>
-    </h1>
+<section class="w-full h-full flex items-center justify-center bg-white lg:shadow lg:max-w-[1024px] lg:max-h-[460px]">
+  <section class="flex items-center justify-center flex-col w-full lg:w-1/3">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-sgin' }) do |f| %>
+      <h1 class="mb-4 flex items-center gap-2">
+        <span class="material-symbols-outlined">admin_panel_settings</span>
+        <span><%=t('title')%></span>
+      </h1>
 
-    <div class="field mb-4">
-      <%= f.label :email do %>
-        <i class="material-symbols-outlined">alternate_email</i>
-        <%= t(:email)%>
-      <% end %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'w-full' %>
-    </div>
+      <div class="field mb-4">
+        <%= f.label :email do %>
+          <i class="material-symbols-outlined">alternate_email</i>
+          <%= t(:email)%>
+        <% end %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'w-full' %>
+      </div>
 
-    <div class="field mb-4">
-      <%= f.label :password do %>
-        <i class="material-symbols-outlined">password</i>
-        <%= t(:password)%>
-      <% end %>
+      <div class="field mb-4">
+        <%= f.label :password do %>
+          <i class="material-symbols-outlined">password</i>
+          <%= t(:password)%>
+        <% end %>
         <%= f.password_field :password, autocomplete: "current-password", class: 'w-full' %>
-    </div>
+      </div>
 
-    <div class="actions w-full">
-      <button type="submit" class="w-full flex justify-center items-center gap-2">
-        <span class="material-symbols-outlined">login</span>
-        <%=t('login')%>
-      </button>
-    </div>
+      <div class="actions w-full">
+        <button type="submit" class="w-full flex justify-center items-center gap-2">
+          <span class="material-symbols-outlined">login</span>
+          <%=t('login')%>
+        </button>
+      </div>
   </section>
-  <%= image_tag 'adm.webp', alt: 'banner-admin', class: 'hidden lg:block overflow-hidden' %>
-
+  <div class="hidden lg:block lg:h-full lg:flex-1 bg-red-500"/>
+    <%#= image_tag 'adm.webp', alt: 'banner-admin', class: 'hidden lg:block lg:h-full lg:w-auto overflow-hidden' %>
   <% end %>
 </section>
