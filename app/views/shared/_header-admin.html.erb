@@ -9,9 +9,10 @@
     </nav>
     <div class="flex gap-5 items-center border border-[#b22222] bg-white">
       <span class="pl-5"><%= current_user.email %></span>
-      <p><%= link_to destroy_user_session_path, method: :delete do%>
-      <span class="material-symbols-outlined">logout</span>
-      <% end %></p>
+      <%= button_to destroy_user_session_path, method: :delete do %>
+        <span class="material-symbols-outlined">logout</span>
+      <% end %>
+
     </div>
   </section>
 </header>

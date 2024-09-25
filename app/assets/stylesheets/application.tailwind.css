@@ -70,7 +70,7 @@
   }
 
   footer{
-    @apply w-full container;
+    @apply w-full bg-white;
   }
 
   .form-sgin{

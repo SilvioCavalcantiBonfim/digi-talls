@@ -16,11 +16,15 @@
     <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css', rel: 'stylesheet' %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <%= render 'shared/header-admin'%>
+    <% if !request.path.include?('admin') %>
+      <%= render 'shared/header' %>
+    <% end %>
     <main>
       <%= yield %>
     </main>
