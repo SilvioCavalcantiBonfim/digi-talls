@@ -1,5 +1,10 @@
- <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 container mx-auto py-5">
-    <%@faqs.each do |faq|%>
-      <%= render partial: 'faq', locals: { faq: faq } %>
-    <%end%>
-</section>
+<%= form_with url: faqs_path, method: :get, locals: true, data: { controllers: 'search' } do %>
+  <input type="text" id="query" name="query" data-action="change->search#handle" data-form-target="input"/>
+<% end %>
+<main class="container mx-auto">
+<%= turbo_frame_tag "faqs", class: "grid grid-cols-1 lg:grid-cols-2 gap-4 w-full py-5" do %>
+  <% @faqs.each do |faq| %>
+    <%= render partial: 'faq', locals: { faq: faq } %>
+  <% end %>
+<% end %>
+</main>

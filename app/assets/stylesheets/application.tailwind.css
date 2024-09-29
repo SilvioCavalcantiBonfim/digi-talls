@@ -37,14 +37,6 @@
     @apply bg-[#fff8f7] h-full w-full flex flex-col;
   }
 
-  header{
-    @apply w-full bg-[#b22222] bg-opacity-10 shadow;
-  }
-
-  main{
-    @apply w-full flex-1 container mx-auto flex items-center justify-center;
-  }
-
   label {
     @apply text-black capitalize font-bold text-base flex items-center gap-1 leading-6 my-1;
   }

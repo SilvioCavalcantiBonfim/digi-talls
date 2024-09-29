@@ -22,12 +22,7 @@
 
   <body>
     <%= render 'shared/header-admin'%>
-    <% if !request.path.include?('admin') %>
-      <%= render 'shared/header' %>
-    <% end %>
-    <main>
-      <%= yield %>
-    </main>
+    <%= yield %>
     <%= render 'shared/footer'%>
   </body>
 </html>
