@@ -46,6 +46,10 @@
     @apply focus:outline-none focus:ring-1 focus:ring-[#b22222] focus:border-[#b22222] transition-colors duration-300;
   }
 
+  input[type=search]{
+    @apply pl-12;
+  }
+
   textarea {
     @apply focus:outline-none focus:ring-1 focus:ring-[#b22222] focus:border-[#b22222] transition-colors duration-300;
     @apply bg-white border-[0.5px] border-[#D1D5DB] box-border w-full py-2.5 px-3.5;

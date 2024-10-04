@@ -1,6 +1,10 @@
-<%= form_with url: faqs_path, method: :get, locals: true, data: { controllers: 'search' } do %>
-  <input type="text" id="query" name="query" data-action="change->search#handle" data-form-target="input"/>
-<% end %>
+<header class="container mx-auto">
+  <h1></h1>
+  <%= form_with url: faqs_path, method: :get, locals: true, data: { controllers: 'search' }, class: "w-full relative flex items-center" do %>
+    <span class="material-symbols-outlined absolute opacity-50 p-3">search</span>
+    <input type="search" id="query" name="query" data-action="change->search#handle" data-form-target="input" placeholder=""/>
+  <% end %>
+</header>
 <main class="container mx-auto">
 <%= turbo_frame_tag "faqs", class: "grid grid-cols-1 lg:grid-cols-2 gap-4 w-full py-5" do %>
   <% @faqs.each do |faq| %>
