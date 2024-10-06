@@ -4,6 +4,7 @@ pt:
   login: "Log In"
   title: "Digi Talls"
   faq:
+    link: "FAQ - Digi Responde"
     back_to_all: "Voltar para todas as FAQs"
     new: "Criar FAQ"
     editing: "Editando FAQ" 

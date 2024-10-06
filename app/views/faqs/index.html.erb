@@ -1,9 +1,12 @@
-<header class="container mx-auto">
-  <h1></h1>
-  <%= form_with url: faqs_path, method: :get, locals: true, data: { controllers: 'search' }, class: "w-full relative flex items-center" do %>
-    <span class="material-symbols-outlined absolute opacity-50 p-3">search</span>
-    <input type="search" id="query" name="query" data-action="change->search#handle" data-form-target="input" placeholder=""/>
-  <% end %>
+<header class="w-full pt-4 bg-[#b22222] pb-28">
+  <%= render partial: 'shared/nav'%>
+  <section class="mx-auto container flex flex-col gap-12 items-center">
+    <h1 class="font-bold text-[36px] leading-[44px] flex items-center text-center text-white">Perguntas? Nós Temos as Respostas</h1>
+    <%= form_with url: faqs_path, method: :get, locals: true, data: { controllers: 'search' }, class: "max-w-[695px] w-full relative flex items-center" do %>
+      <span class="material-symbols-outlined absolute opacity-50 p-3">search</span>
+      <input type="search" id="query" name="query" class="w-full" data-action="change->search#handle" data-form-target="input" placeholder=""/>
+    <% end %>
+  </section>
 </header>
 <main class="container mx-auto">
 <%= turbo_frame_tag "faqs", class: "grid grid-cols-1 lg:grid-cols-2 gap-4 w-full py-5" do %>
