@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+<header>
+  <section class="container h-full py-4 mx-auto flex items-center gap-10">
+    <nav class="flex-1 flex items-center gap-5">
+      <%= link_to admin_faqs_path, class: 'btn-outline' do %>
+        <%= t('faq.admin.manager')%>
+        <span class="material-symbols-outlined">tooltip_2</span>
+      <% end %>
+    </nav>
+    <div class="flex gap-5 items-center border border-[#b22222] bg-white">
+      <span class="pl-5"><%= current_user.email %></span>
+      <%= button_to destroy_user_session_path, method: :delete do %>
+        <span class="material-symbols-outlined">logout</span>
+      <% end %>
+
+    </div>
+  </section>
+</header>
+<% end %>

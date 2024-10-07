@@ -1,0 +1,23 @@
+
+        <div class=" w-full flex flex-col" data-controller="faq">
+          <button 
+            data-action="click->faq#toggle" 
+            data-faq-target="button"
+            class="faq-title bg-white hover:bg-opacity-5 text-left">
+            <span class="font-semibold"><%= faq.question %></span>
+            <span
+              data-faq-target="icon"
+              class="material-symbols-outlined transition-all"
+            >
+              expand_more
+            </span>
+          </button>
+          <div
+            data-faq-target="content"
+            class="hidden mt-2"
+          >
+            <p class="text-gray-600 font-normal text-base flex items-center">
+              <%= faq.answer %>
+            </p>
+          </div>
+        </div>

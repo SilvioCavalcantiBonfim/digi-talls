@@ -1,0 +1,9 @@
+<nav class="w-full mx-auto container flex justify-between mb-12">
+  <img src="" alt="logo"/>
+  <section class="flex items-center gap-12">
+    <%= link_to faqs_path, class: 'py-3 px-8 flex items-center gap-2 justify-center' do %>
+      <%= t('faq.link') %>
+      <span class="material-symbols-outlined">forum</span>
+    <% end %>
+  </section>
+</nav>

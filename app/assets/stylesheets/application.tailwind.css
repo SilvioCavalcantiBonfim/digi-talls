@@ -2,12 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
+@import './animation.tailwind.css';
 
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+  .btn-cicle {
+    @apply flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-300;
+  }
+
+  .faq-title {
+    @apply box-border flex w-full justify-between items-center py-2.5 px-8 gap-10 border border-[#904A44] rounded-md transition-colors text-gray-600;
+  }
+
+  .faq-color {
+    @apply text-[#904A44];
+  }
+
+  .scale-in-ver-top {
+    animation: scale-in-ver-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  .scale-out-ver-top {
+    animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+
+  .field{
+    @apply w-full;
+  }
+
+  html {
+    @apply min-h-screen h-full w-screen font-['Roboto'];
+  }
+
+  body {
+    @apply bg-[#fff8f7] h-full w-full flex flex-col;
+  }
+
+  label {
+    @apply text-black capitalize font-bold text-base flex items-center gap-1 leading-6 my-1;
+  }
+
+  input[type=text] {
+    @apply bg-white border-[0.5px] border-[#D1D5DB] box-border w-full py-2.5 px-3.5;
+    @apply focus:outline-none focus:ring-1 focus:ring-[#b22222] focus:border-[#b22222] transition-colors duration-300;
+  }
+
+  input[type=search]{
+    @apply pl-12;
+  }
+
+  textarea {
+    @apply focus:outline-none focus:ring-1 focus:ring-[#b22222] focus:border-[#b22222] transition-colors duration-300;
+    @apply bg-white border-[0.5px] border-[#D1D5DB] box-border w-full py-2.5 px-3.5;
+  }
+
+  button,
+  input[type=submit],
+  a {
+    @apply px-4 py-3 bg-[#b22222] justify-between items-center inline-flex text-center text-white text-base font-medium cursor-pointer hover:bg-red-800 transition-all;
+  }
+
+  h1 {
+    @apply text-[#b22222] flex justify-center items-center text-2xl font-normal font-['Roboto'];
+  }
+
+  footer{
+    @apply w-full bg-white;
+  }
+
+  .form-sgin{
+    @apply w-full px-10 md:px-20 lg:px-10;
+  }
+
+  .btn-option{
+    @apply bg-transparent text-[#b22222] text-lg hover:bg-transparent relative text-center hover:after:scale-x-100 flex items-center gap-2;
+    @apply after:content-[''] after:w-full after:absolute after:h-[2px] after:bg-[#b22222] after:bottom-0 after:left-0 after:scale-x-0 after:transition-all;
+  }
+
+  .btn-outline{
+    @apply border-[1px] border-[#b22222] bg-white bg-opacity-0 text-[#b22222] hover:bg-white px-5 gap-2;
   }
 }
-
-*/

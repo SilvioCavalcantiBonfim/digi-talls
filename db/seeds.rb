@@ -1,9 +1,48 @@
-# frozen_string_literal: true
+# Apaga todos os registros existentes na tabela Faq
+Faq.delete_all
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# Cria novos registros na tabela Faq
+Faq.create!([
+              { question: 'What is the return policy?', answer: 'You can return any product within 30 days of purchase.',
+                is_active: true },
+              { question: 'How can I contact customer service?',
+                answer: 'You can contact customer service via email at support@example.com or call 123-456-7890.', is_active: true },
+              { question: 'Do you offer international shipping?',
+                answer: 'Yes, we offer international shipping to over 50 countries.', is_active: false },
+              { question: 'What payment methods are accepted?',
+                answer: 'We accept Visa, MasterCard, American Express, and PayPal.', is_active: true },
+              { question: 'Where are your products made?',
+                answer: 'Our products are made in various locations, including the USA, Europe, and Asia.', is_active: true },
+              { question: 'Can I track my order?',
+                answer: 'Yes, you can track your order using the tracking number provided in your confirmation email.', is_active: true },
+              { question: 'Do you offer gift cards?', answer: 'Yes, we offer gift cards that can be purchased on our website.',
+                is_active: true },
+              { question: 'How can I change or cancel my order?',
+                answer: 'To change or cancel your order, please contact our customer service team within 24 hours of placing the order.', is_active: true },
+              { question: 'What should I do if I receive a damaged item?',
+                answer: 'If you receive a damaged item, please contact customer service immediately with photos of the damage.', is_active: true },
+              { question: 'Do you have a loyalty program?',
+                answer: 'Yes, we have a loyalty program that rewards you with points for every purchase.', is_active: true },
+              { question: 'How can I reset my password?',
+                answer: 'To reset your password, click on "Forgot Password" on the login page and follow the instructions.', is_active: true },
+              { question: 'Can I return sale items?', answer: 'Sale items can be returned within 14 days of purchase.',
+                is_active: true },
+              { question: 'What is your privacy policy?',
+                answer: 'Our privacy policy outlines how we collect, use, and protect your personal information. You can read it on our website.', is_active: true },
+              { question: 'Do you offer personalized products?',
+                answer: 'Yes, we offer a range of products that can be personalized. Check out our customization options on the product page.', is_active: true },
+              { question: 'Are there any additional shipping fees?',
+                answer: 'Shipping fees vary based on location and order size. You can view the shipping costs at checkout.', is_active: true },
+              { question: 'How can I find out about new products and promotions?',
+                answer: 'Subscribe to our newsletter or follow us on social media to stay updated on new products and promotions.', is_active: true },
+              { question: 'Do you offer student discounts?',
+                answer: 'Yes, we offer a 10% discount for students. Please verify your student status at checkout.', is_active: true },
+              { question: 'What is your policy on bulk purchases?',
+                answer: 'For bulk purchases, please contact us directly for special pricing and terms.', is_active: true },
+              { question: 'Can I use multiple promo codes on a single order?',
+                answer: 'No, only one promo code can be applied per order.', is_active: true },
+              { question: 'How can I leave a review for a product?',
+                answer: 'You can leave a review on the product page by clicking on "Write a Review."', is_active: true },
+              { question: 'What should I do if I forgot my account username?',
+                answer: 'If you forgot your username, please use the "Forgot Username" feature on the login page to recover it.', is_active: true }
+            ])

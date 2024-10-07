@@ -1,0 +1,42 @@
+<%= form_with(model: [:admin, faq]) do |form| %>
+  <% if faq.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(faq.errors.count, "error") %> prohibited this faq from being saved:</h2>
+
+      <ul>
+        <% faq.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :question do %>
+      <i class="material-symbols-outlined">quiz</i>
+      <%= t('faq.question') %>
+    <%end%>
+    <%= form.text_field :question %>
+  </div>
+
+  <div>
+    <%= form.label :answer do %>
+      <i class="material-symbols-outlined">subject</i>
+      <%= t('faq.answer') %>
+    <%end%>
+    <%= form.text_area :answer %>
+  </div>
+
+  <div>
+    <%= form.label :is_active do %>
+      <i class="material-symbols-outlined">visibility</i>
+      <%= t('faq.is_active') %>
+    <%end%>
+    <%= form.check_box :is_active %>
+  </div>
+
+  <div class="flex w-full justify-between items-center gap-2">
+    <%= form.submit %>
+    <%= yield%>
+  </div>
+<% end %>
