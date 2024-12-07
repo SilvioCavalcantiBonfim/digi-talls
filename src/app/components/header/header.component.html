@@ -3,14 +3,14 @@
   <nav class="digitalls-header__nav">
     <!-- <a href="#servicos" class="digitalls-header__link">Serviços</a> -->
     <!-- <a href="#depoimentos" class="digitalls-header__link">Depoimentos</a> -->
-    <a href="#faq" class="digitalls-header__link"
+    <!-- <a href="#faq" class="digitalls-header__link"
       >
       <span>FAQ - Digi Responde</span>
       <i class="ri-question-answer-fill ri-lg"></i
-    ></a>
-    <a href="#contato" class="digitalls-header__link">
-    <span>Contato</span>
-    <i class="ri-send-plane-fill ri-lg"></i>
+    ></a> -->
+    <a [routerLink]="route.path" class="digitalls-header__link" *ngFor="let route of routes">
+    <span>{{route.title}}</span>
+    <i [class]="'ri-'+route.icon+'-fill ri-lg'"></i>
     </a>
   </nav>
 </header>
