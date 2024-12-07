@@ -1,0 +1,58 @@
+@import "../../scss/main.scss";
+
+.digitalls-footer {
+  width: 100%;
+  min-height: 116px;
+  display: flex;
+  align-items: center;
+  @include desktop {
+    justify-content: center;
+  }
+  &__wrapper {
+    @include desktop {
+      max-width: 1200px;
+      width: 100%;
+    }
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  &__text {
+    flex: 1;
+    @include roboto-regular;
+    color: #231918;
+  }
+
+  &__links,
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+
+    .digitalls-footer__link {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 12px 0;
+      @include roboto-regular;
+    }
+
+    .digitalls-footer__social {
+      text-decoration: none;
+      color: $text-color;
+      transition: all 0.2s ease-in-out;
+      width: 48px;
+      height: 48px;
+      @include flex-center;
+      border-radius: 100%;
+      background-color: transparent;
+
+      &:hover {
+        color: $primary-color;
+        background-color: rgba($primary-color, $alpha: 0.05);
+      }
+    }
+  }
+}
