@@ -1,1 +1,93 @@
-<p>contact works!</p>
+<main class="digitalls-main">
+  <section class="digitalls-contact">
+    <div class="digitalls-contact__info">
+        <div class="digitalls-contact__info__titles">
+            <h1 class="digitalls-contact__info__title">Estamos aqui para você!</h1>
+            <p class="digitalls-contact__info__description">
+              Envie suas dúvidas ou comentários através do formulário e retornaremos
+              em breve.
+            </p>
+        </div>
+      <ul class="digitalls-contact__info__details">
+        <li class="digitalls-contact__detail">
+          <span class="digitalls-contact__icon">
+            <i class="ri-mail-line ri-lg"></i>
+          </span>
+          E-mail de contato:
+          <a href="mailto:contact@digitalls.com"
+            >contact{{ "@" }}digitalls.com</a
+          >
+        </li>
+        <li class="digitalls-contact__detail">
+          <span class="digitalls-contact__icon"
+            ><i class="ri-phone-line ri-lg"></i
+          ></span>
+          Telefone de contato:
+          <a href="tel:+5581900000000">+55 (81) 90000-0000</a>
+        </li>
+        <li class="digitalls-contact__detail">
+          <span class="digitalls-contact__icon"
+            ><i class="ri-question-answer-line ri-lg"></i
+          ></span>
+          Atendimento de Segunda a Sexta das 9:00 às 17:00
+        </li>
+      </ul>
+    </div>
+    <div class="digitalls-contact__form-container">
+      <form class="digitalls-form">
+        <h2 class="digitalls-form__title">Fale conosco</h2>
+        <div class="digitalls-form__group">
+          <label for="name" class="digitalls-form__label">
+            <i class="ri-user-3-fill"></i>
+            <span>Nome Completo</span>
+          </label>
+          <input
+            type="text"
+            id="name"
+            class="digitalls-form__input"
+            placeholder="Nome Completo"
+          />
+        </div>
+        <div class="digitalls-form__group">
+          <label for="contact" class="digitalls-form__label">
+            <i class="ri-mail-fill"></i>
+            <span>Contato</span>
+          </label>
+          <input
+            type="text"
+            id="contact"
+            class="digitalls-form__input"
+            placeholder="E-mail ou Telefone"
+          />
+        </div>
+        <div class="digitalls-form__group">
+          <label for="subject" class="digitalls-form__label">
+            <i class="ri-text"></i>
+            <span>Assunto</span>
+          </label>
+          <input
+            type="text"
+            id="subject"
+            class="digitalls-form__input"
+            placeholder="Assunto"
+          />
+        </div>
+        <div class="digitalls-form__group">
+          <label for="message" class="digitalls-form__label">
+            <i class="ri-align-left"></i>
+            <span>Mensagem</span>
+          </label>
+          <textarea
+            id="message"
+            class="digitalls-form__textarea"
+            placeholder="Mensagem"
+          ></textarea>
+        </div>
+        <button type="submit" class="digitalls-form__button">
+          <span>Enviar</span>
+          <i class="ri-send-plane-fill"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+</main>

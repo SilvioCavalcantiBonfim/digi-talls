@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from './components/footer/footer.module';
 import { HeaderModule } from "./components/header/header.module";
+import { WaveModule } from "./components/wave/wave.module";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HeaderModule } from "./components/header/header.module";
     BrowserModule,
     FooterModule,
     AppRoutingModule,
-    HeaderModule
+    HeaderModule,
+    WaveModule
 ],
   providers: [],
   bootstrap: [AppComponent]

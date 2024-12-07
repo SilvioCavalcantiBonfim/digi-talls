@@ -2,7 +2,7 @@
 
 .digitalls-header {
   @include flex-center;
-  background-color: $primary-color;
+  padding-top: 20px;
   color: #fff;
   width: 100%;
   &__wrapper {
