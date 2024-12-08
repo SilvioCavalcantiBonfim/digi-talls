@@ -1,0 +1,35 @@
+<ng-container
+  *ngTemplateOutlet="
+    accordionTemplate;
+    context: {
+      isOpen: state$ | async,
+      title: accordion.title,
+      content: accordion.content
+    }
+  "
+></ng-container>
+
+<ng-template
+  #accordionTemplate
+  let-isOpen="isOpen"
+  let-title="title"
+  let-content="content"
+>
+  <section
+    class="digitalls-accordion__title"
+    [ngClass]="{ 'digitalls-accordion__title--expanded': isOpen }"
+    (click)="toogle()"
+  >
+    <span>{{ title }}</span>
+    <i
+      class="ri-arrow-up-s-line digitalls-accordion__icon"
+      [ngClass]="{ 'digitalls-accordion__icon--expanded': isOpen }"
+    ></i>
+  </section>
+  <section
+    class="digitalls-accordion__content"
+    [@accordionAnimation]="isOpen ? 'open' : 'closed'"
+  >
+    {{ content }}
+  </section>
+</ng-template>

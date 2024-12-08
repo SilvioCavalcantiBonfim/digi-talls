@@ -1,0 +1,42 @@
+.digitalls-accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__title {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    border: 1px solid #904a44;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+    &--expanded{
+        color: #904a44;
+    }
+  }
+  &__icon{
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+    &--expanded{
+        transform: rotate(180deg);
+    }
+  }
+  &__content {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+    padding: 0 16px;
+
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+:host {
+  @extend .digitalls-accordion;
+}

@@ -1,0 +1,61 @@
+@import "../../scss/main.scss";
+.ri-search-2-line {
+  color: black;
+  padding: 0 5px 0 10px;
+  cursor: text;
+}
+.ri-close-line {
+  color: black;
+  padding: 0 10px 0 5px;
+  cursor: pointer;
+}
+.digitalls-faq {
+  margin-top: 15px;
+  @include desktop {
+      max-width: 1200px;
+      width: 100%;
+    }
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  gap: 5rem;
+  &__hero {
+    text-align: center;
+    background-color: $primary-color;
+    color: #fff;
+    font-weight: 400;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    &__search {
+      background-color: white;
+      display: flex;
+      width: 550px;
+      .digitalls-faq__search-input {
+        background-color: transparent;
+        width: 100%;
+        padding: 0.5rem;
+        border: none;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+:host{
+  flex: 1;
+}
