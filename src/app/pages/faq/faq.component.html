@@ -4,18 +4,48 @@
     <form class="digitalls-faq__hero__search">
       <i class="ri-search-2-line ri-xxs" (click)="search.focus()"></i>
       <input
-      #search
-      type="text"
-      placeholder="Pesquise nas FAQs..."
-      class="digitalls-faq__search-input"
-      [(ngModel)]="searchValue"
-      [ngModelOptions]="{standalone: true}"
+        #search
+        type="text"
+        placeholder="Pesquise nas FAQs..."
+        class="digitalls-faq__search-input"
+        [formControl]="filterValue"
       />
-      <i class="ri-close-line ri-xxs" *ngIf="searchValue.length > 0" (click)="searchValue = ''"></i>
+      <i
+        class="ri-close-line ri-xxs"
+        *ngIf="searchValue.length > 0"
+        (click)="searchValue = ''"
+      ></i>
     </form>
   </section>
-  
-  <section class="digitalls-faq__content">
-    <dt-accordion [accordion]="{title: 'title', content: 'content'}"></dt-accordion>
+
+  <ng-container *ngIf="(faqs$ | async) as faqs">
+    <section class="digitalls-faq__content" *ngIf="faqs.length !== 0, else faqNotFound">
+      <dt-accordion [accordion]="faq" *ngFor="let faq of faqs"></dt-accordion>
     </section>
+  </ng-container>
 </main>
+
+<ng-template #faqNotFound>
+  <div class="digitalls-faq-not-found">
+    <h2 class="digitalls-faq-not-found__title">Nenhuma FAQ encontrada</h2>
+    <p class="digitalls-faq-not-found__message">
+      Não encontramos resultados para sua pesquisa. Tente utilizar palavras
+      diferentes ou entre em contato.
+    </p>
+    <div class="digitalls-faq-not-found__actions">
+      <a
+        class="digitalls-faq-not-found__button"
+        (click)="searchValue = ''; search.focus()"
+      >
+        Buscar novamente
+        <i class="ri-search-2-line"></i>
+    </a>
+      <a
+        class="digitalls-faq-not-found__button"
+        [routerLink]="'/contact'"
+      >
+        Entrar em contato
+    </a>
+    </div>
+  </div>
+</ng-template>

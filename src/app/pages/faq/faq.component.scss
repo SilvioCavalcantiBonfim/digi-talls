@@ -1,24 +1,15 @@
 @import "../../scss/main.scss";
-.ri-search-2-line {
-  color: black;
-  padding: 0 5px 0 10px;
-  cursor: text;
-}
-.ri-close-line {
-  color: black;
-  padding: 0 10px 0 5px;
-  cursor: pointer;
-}
+
 .digitalls-faq {
   margin-top: 15px;
   @include desktop {
-      max-width: 1200px;
-      width: 100%;
-    }
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-  gap: 5rem;
+    max-width: 1200px;
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 6rem;
   &__hero {
     text-align: center;
     background-color: $primary-color;
@@ -38,6 +29,9 @@
 
     &__search {
       background-color: white;
+      color: rgba(0, 0, 0, 0.5);
+      gap: 5px;
+      padding: 0 10px;
       display: flex;
       width: 550px;
       .digitalls-faq__search-input {
@@ -47,15 +41,64 @@
         border: none;
         font-size: 1rem;
       }
+      &:last-child{
+        cursor: pointer;
+      }
     }
   }
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+  &-not-found {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+
+    &__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+
+    &__message {
+      font-size: 1rem;
+      color: $text-color;
+      margin-bottom: 2rem;
+    }
+
+    &__actions {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      justify-content: center;
+    }
+
+    &__button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: $primary-color;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
 }
-:host{
+:host {
   flex: 1;
 }
