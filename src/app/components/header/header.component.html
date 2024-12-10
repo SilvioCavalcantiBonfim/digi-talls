@@ -1,14 +1,7 @@
 <header class="digitalls-header__wrapper">
-  <dt-header-logo></dt-header-logo>
-  <nav class="digitalls-header__nav">
-    <!-- <a href="#servicos" class="digitalls-header__link">Serviços</a> -->
-    <!-- <a href="#depoimentos" class="digitalls-header__link">Depoimentos</a> -->
-    <!-- <a href="#faq" class="digitalls-header__link"
-      >
-      <span>FAQ - Digi Responde</span>
-      <i class="ri-question-answer-fill ri-lg"></i
-    ></a> -->
-    <a [routerLink]="route.path" class="digitalls-header__link" *ngFor="let route of routes">
+  <dt-header-logo *ngIf="logo"></dt-header-logo>
+  <nav class="digitalls-header__nav" [ngClass]="{'digitalls-header__nav--no-logo': !logo}">
+    <a [routerLink]="'/'+route.path" class="digitalls-header__link" [ngClass]="{'digitalls-header__link--no-logo': !logo}" *ngFor="let route of routes">
     <span>{{route.title}}</span>
     <i [class]="'ri-'+route.icon+'-fill ri-lg'"></i>
     </a>

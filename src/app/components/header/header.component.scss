@@ -5,6 +5,9 @@
   padding-top: 20px;
   color: #fff;
   width: 100%;
+  &--hidden{
+    display: none !important;
+  }
   &__wrapper {
     @include desktop {
       max-width: 1200px;
@@ -20,6 +23,11 @@
     justify-content: space-between;
     align-items: center;
     gap: 32px;
+    &--no-logo{
+      width: 100%;
+      padding-inline: 100px;
+      color: $primary-color;
+    }
   }
   &__link {
     font-style: normal;
@@ -32,6 +40,12 @@
     padding: 6px 10px;
     gap: 8px;
     position: relative;
+
+    &--no-logo{
+      &::after{
+        background-color: $primary-color !important;
+      }
+    }
 
     &::after{
       position: absolute;
@@ -48,8 +62,4 @@
       transform: scaleX(1);
     }
   }
-}
-
-:host {
-  @extend .digitalls-header;
 }

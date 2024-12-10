@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { IHeaderPath } from './models/Header.interface';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @Input()
+  set isVisible(isVisible: boolean) {
+    this.hidden = !isVisible;
+    this.show = isVisible;
+  }
+
+  @HostBinding('class.digitalls-hidden') hidden = false;
+  @HostBinding('class.digitalls-header') show = true;
+
   protected routes: IHeaderPath[] = [];
+  @Input() inverse = false;
+  @Input() logo = true;
 
   constructor(private router: Router) {}
 

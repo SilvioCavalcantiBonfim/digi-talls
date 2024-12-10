@@ -4,6 +4,7 @@ import { ContactModule } from './pages/contact/contact.module';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { FaqModule } from './pages/faq/faq.module';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
@@ -20,10 +21,15 @@ const routes: Routes = [
       position: 9,
     },
   },
+  {
+    path: 'home',
+    component: HomeComponent,
+    data: { title: 'Home', icon: 'home', position: 1 },
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes), ContactModule, FaqModule],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

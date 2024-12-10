@@ -9,6 +9,11 @@
 }
 body{
   min-height: 100vh;
+  background-color: #FFF8F7;
+}
+
+.digitalls-hidden{
+  display: none !important;
 }
 /* Reset para o estilo dos links */
 a {
@@ -24,4 +29,8 @@ a {
 
 a:hover, a:focus {
   text-decoration: none;  /* Remove sublinhado ao focar ou passar o mouse */
+}
+
+strong{
+  font-weight: 700;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 
@@ -18,18 +18,26 @@ export class WaveComponent {
       'M0 355.167L120 351.054C240 346.63 480 338.87 720 342.75C960 346.63 1200 363.703 1320 371.696L1440 380V0H1320C1200 0 960 0 720 0C480 0 240 0 120 0H0V355.167Z',
   };
 
+  @Input() set isVisible(isVisible: boolean) {
+    this.hidden = !isVisible;
+  }
+
+  @HostBinding('class.wave--hidden') hidden = false;
+
   constructor(private router: Router) {
-    this.wavePath = this.paths['/home'];
+    this.wavePath = this.paths['/faq'];
   }
 
   ngOnInit(): void {
+    console.log('flag');
     this.router.events
       .pipe(
         filter((event) => event instanceof NavigationEnd),
         map((event) => (event as any).urlAfterRedirects as string)
       )
       .subscribe((event) => {
-        this.wavePath = this.paths[event] || this.paths['/home'];
+        console.log(this.paths[event]);
+        this.wavePath = this.paths[event] || this.paths['/faq'];
       });
   }
 }

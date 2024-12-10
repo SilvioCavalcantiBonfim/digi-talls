@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FooterModule } from './components/footer/footer.module';
 import { HeaderModule } from "./components/header/header.module";
 import { WaveModule } from "./components/wave/wave.module";
+import { HomeModule } from './pages/home/home.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WaveModule } from "./components/wave/wave.module";
     FooterModule,
     AppRoutingModule,
     HeaderModule,
-    WaveModule
+    WaveModule,
+    HomeModule
 ],
   providers: [],
   bootstrap: [AppComponent]

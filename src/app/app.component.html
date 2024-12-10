@@ -1,4 +1,4 @@
-<dt-header></dt-header>
-<dt-wave></dt-wave>
+<dt-header [isVisible]="(render$ | async) || false"></dt-header>
+<dt-wave [isVisible]="(render$ | async) || false"></dt-wave>
 <router-outlet></router-outlet>
 <dt-footer></dt-footer>
