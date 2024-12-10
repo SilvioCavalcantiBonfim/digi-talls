@@ -2,19 +2,23 @@
 
 .digitalls-footer {
   width: 100%;
-  min-height: 116px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 16px 0;
   @include desktop {
-    justify-content: center;
+    min-height: 116px;
   }
   &__wrapper {
     @include desktop {
       max-width: 1200px;
       width: 100%;
+      flex-direction: row;
     }
-    display: flex;
+    flex-direction: column;
     align-items: center;
+    display: flex;
     gap: 3rem;
   }
   &__text {

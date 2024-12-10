@@ -5,6 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { FaqModule } from './pages/faq/faq.module';
 import { HomeComponent } from './pages/home/home.component';
+import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,12 @@ const routes: Routes = [
     component: HomeComponent,
     data: { title: 'Home', icon: 'home', position: 1 },
   },
+  {
+    path: 'testimonials',
+    component: TestimonialsComponent,
+    data: { title: 'Depoimentos', icon: 'megaphone', position: 2 },
+  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -3,11 +3,14 @@
 .digitalls-hero {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   height: 100vh;
-  background-color: #ba141a;
+  background-color: $primary-color;
   color: #fff;
   position: relative;
+  @include desktop {
+    align-items: center;
+  }
   &__wrapper {
     display: flex;
     margin-inline: auto;
@@ -43,8 +46,14 @@
     &__title {
       font-style: normal;
       font-weight: 400;
-      font-size: 26px;
       line-height: 122%;
+      font-size: 20px;
+      text-align: center;
+
+      @include desktop {
+        text-align: left;
+        font-size: 26px;
+      }
 
       color: #ffffff;
     }
@@ -54,7 +63,7 @@
       padding: 0.8rem 1.5rem;
       width: max-content;
       background-color: #fff;
-      color: #ba141a;
+      color: $primary-color;
       font-style: normal;
       font-weight: 500;
       font-size: 1rem;
@@ -73,28 +82,41 @@
     }
   }
 
-  &__image {
-    display: flex;
+  &__carousel {
+    display: none;
+    @include desktop {
+      display: flex;
+    }
     justify-content: center;
     flex: 1;
-    img {
-      height: 450px;
-      aspect-ratio: 1 / 1;
-      background-color: blue;
-      border-radius: 10px;
+    position: relative;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    &__image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+    }
+    &carousel__image.visible {
+      opacity: 1;
     }
   }
 }
 .digitalls-about {
   padding: 3rem 2rem;
-  background-color: #FFF8F7;
+  background-color: #fff8f7;
   text-align: center;
   display: flex;
-  @include desktop{
+  @include desktop {
     max-width: 1200px;
     margin: auto;
   }
-  &__wrapper{
+  &__wrapper {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
@@ -104,13 +126,16 @@
   &__title {
     font-style: normal;
     font-weight: 700;
-    font-size: 72px;
+    font-size: 36px;
+    @include desktop {
+      font-size: 72px;
+    }
     line-height: 120%;
     color: #000000;
   }
 
   span {
-    color: #ba141a;
+    color: $primary-color;
     font-weight: bold;
   }
 
@@ -124,14 +149,18 @@
     text-align: left;
   }
 
-  &__icon{
+  &__icon {
     width: 25%;
+    display: none;
+    @include desktop {
+      display: block;
+    }
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
-  } 
+  }
 }
 .digitalls-mission {
   padding: 3rem 2rem;
@@ -141,8 +170,8 @@
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
-  &__wrapper{
-    @include desktop{
+  &__wrapper {
+    @include desktop {
       max-width: 1200px;
       margin: auto;
     }
@@ -151,7 +180,7 @@
     padding: 0 20px;
     box-sizing: border-box;
   }
-  &__wrapper__title{
+  &__wrapper__title {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -159,7 +188,10 @@
   &__title {
     font-style: normal;
     font-weight: 700;
-    font-size: 72px;
+    font-size: 36px;
+    @include desktop {
+      font-size: 72px;
+    }
     line-height: 120%;
   }
 
@@ -171,22 +203,24 @@
     margin-left: auto;
     margin-right: auto;
     text-align: right;
-
   }
 
-  &__icon{
+  &__icon {
     width: 25%;
+    display: none;
+    @include desktop {
+      display: block;
+    }
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
-  } 
+  }
 }
 
-
 .digitalls-objective {
-  svg{
+  svg {
     position: absolute;
     z-index: 0;
     top: 0;
@@ -194,14 +228,14 @@
   }
   position: relative;
   padding: 3rem 2rem;
-  background-color: #CFEDFB;
+  background-color: #cfedfb;
   color: #000000;
   text-align: center;
   display: flex;
   width: 100%;
-  &__wrapper{
+  &__wrapper {
     z-index: 100;
-    @include desktop{
+    @include desktop {
       max-width: 1200px;
       margin: auto;
     }
@@ -209,7 +243,7 @@
     padding: 0 20px;
     box-sizing: border-box;
   }
-  &__wrapper__title{
+  &__wrapper__title {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
@@ -218,11 +252,14 @@
   &__title {
     font-style: normal;
     font-weight: 700;
-    font-size: 72px;
     line-height: 120%;
+    font-size: 36px;
+    @include desktop {
+      font-size: 72px;
+    }
   }
-  span{
-    color: #084D6E;
+  span {
+    color: #084d6e;
     font-weight: 700;
   }
 
@@ -234,48 +271,62 @@
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-
   }
 
-  &__icon{
+  &__icon {
     width: 25%;
+    display: none;
+    @include desktop {
+      display: block;
+    }
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
-  } 
+  }
 }
-
 
 .digitalls-team {
   padding: 3rem 2rem;
-  background-color: #fff;
+  @include desktop {
+    max-width: 1200px;
+    margin: auto;
+  }
 
   &__title {
     font-size: 2rem;
     text-align: center;
-    color: #ba141a;
     margin-bottom: 2rem;
-
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    font-size: 36px;
+    @include desktop {
+      font-size: 72px;
+    }
     span {
+      color: $primary-color;
       font-weight: bold;
     }
   }
 
   &__members {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
+    @include desktop {
+      justify-content: space-between;
+      flex-direction: row;
+    }
     gap: 1.5rem;
   }
 
   &__member {
     text-align: center;
-    background-color: #f5f5f5;
     border-radius: 10px;
     padding: 1.5rem;
-    max-width: 200px;
+    // width: 300px;
 
     img {
       width: 100px;
@@ -285,10 +336,11 @@
     }
 
     &__name {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 0.5rem;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 120%;
+      color: #000000;
     }
 
     &__role {
@@ -300,10 +352,25 @@
     &__social {
       display: flex;
       justify-content: center;
-      gap: 0.5rem;
+      gap: 12px;
+
+      &--1 {
+        a {
+          color: #000080;
+        }
+      }
+      &--2 {
+        a {
+          color: #b22222;
+        }
+      }
+      &--3 {
+        a {
+          color: #084d6e;
+        }
+      }
 
       a {
-        color: #ba141a;
         font-size: 1.2rem;
 
         &:hover {

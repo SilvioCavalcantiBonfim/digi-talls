@@ -1,0 +1,18 @@
+<section class="digitalls-testimonials">
+  <div class="digitalls-testimonials__title">
+    <h2>Depoimentos dos Clientes</h2>
+  </div>
+  <div class="digitalls-testimonials__list">
+    <ng-container *ngFor="let t of testimonials">
+        <article class="digitalls-testimonials__item">
+            <p class="digitalls-testimonials__item__text">
+                "{{t.texto}}"
+            </p>
+            <h3 class="digitalls-testimonials__item__author">{{t.autor}}</h3>
+            <p class="digitalls-testimonials__item__position">
+                {{t.cargo}}
+            </p>
+        </article>
+    </ng-container>
+  </div>
+</section>

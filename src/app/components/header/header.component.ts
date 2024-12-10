@@ -14,6 +14,8 @@ export class HeaderComponent implements OnInit {
     this.show = isVisible;
   }
 
+  protected menuOpen = false;
+
   @HostBinding('class.digitalls-hidden') hidden = false;
   @HostBinding('class.digitalls-header') show = true;
 

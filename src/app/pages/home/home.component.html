@@ -11,8 +11,13 @@
         <i class="ri-presentation-fill"></i>
       </button>
     </div>
-    <div class="digitalls-hero__image">
-      <img src="team.png" alt="Equipe Digi Talls" />
+    <div class="digitalls-hero__carousel">
+      <div
+        class="digitalls-hero__carousel__image"
+        *ngFor="let image of images; let i = index"
+        [@fadeAnimation]="i === currentIndex ? 'visible' : 'hidden'"
+        [style.backgroundImage]="'url(' + image + ')'"
+      ></div>
     </div>
   </section>
   <aside class="digitalls-hero__nav">
@@ -110,33 +115,42 @@
   <h2 class="digitalls-team__title">Nossa <span>Equipe</span></h2>
   <div class="digitalls-team__members">
     <div class="digitalls-team__member">
-      <img src="member1.png" alt="Taísa F. Aureliano" />
-      <h4 class="digitalls-team__name">Taísa F. Aureliano</h4>
-      <p class="digitalls-team__role">Mestre em ...</p>
-      <div class="digitalls-team__social">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+      <img src="assets/person1.png" alt="Taísa F. Aureliano" />
+      <h4 class="digitalls-team__member__name">Taísa F. Aureliano</h4>
+      <p class="digitalls-team__member__role">Mestre em ...</p>
+      <div
+        class="digitalls-team__member__social digitalls-team__member__social--1"
+      >
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-tiktok-line"></i></a>
+        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+      </div>
+    </div>
+    <div class="digitalls-team__member" *ngIf="true">
+      <img src="assets/person2.png" alt="Gilvaneide Gomes" />
+      <h4 class="digitalls-team__member__name">Gilvaneide Gomes</h4>
+      <p class="digitalls-team__member__role">Mestre em ...</p>
+      <div
+        class="digitalls-team__member__social digitalls-team__member__social--2"
+      >
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-tiktok-line"></i></a>
+        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
       </div>
     </div>
     <div class="digitalls-team__member">
-      <img src="member2.png" alt="Gilvaneide Gomes" />
-      <h4 class="digitalls-team__name">Gilvaneide Gomes</h4>
-      <p class="digitalls-team__role">Mestre em ...</p>
-      <div class="digitalls-team__social">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </div>
-    <div class="digitalls-team__member">
-      <img src="member3.png" alt="Fabiola Silva" />
-      <h4 class="digitalls-team__name">Fabiola Silva</h4>
-      <p class="digitalls-team__role">Mestre em ...</p>
-      <div class="digitalls-team__social">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+      <img src="assets/person3.png" alt="Fabiola Silva" />
+      <h4 class="digitalls-team__member__name">Fabiola Silva</h4>
+      <p class="digitalls-team__member__role">Mestre em ...</p>
+      <div
+        class="digitalls-team__member__social digitalls-team__member__social--3"
+      >
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-tiktok-line"></i></a>
+        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
       </div>
     </div>
   </div>
